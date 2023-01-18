@@ -3,12 +3,11 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 const SignUp = '/signup';
 const Login = '/login';
 const Logout = '/logout';
-const user = await response.json();
-const Path = 'http://127.0.0.1:3000'
+const Path = 'http://127.0.0.1:3000';
 
 const initialState = {
-    user: [],
-  };
+  user: [],
+};
 
 export const logInUser = createAsyncThunk(Login, async (state) => {
   const response = await fetch(`${Path}/login`, {
@@ -18,6 +17,7 @@ export const logInUser = createAsyncThunk(Login, async (state) => {
     },
     body: JSON.stringify(state),
   });
+  const user = await response.json();
   return user;
 });
 
@@ -29,10 +29,11 @@ export const signUpUser = createAsyncThunk(SignUp, async (state) => {
     },
     body: JSON.stringify(state),
   });
+  const user = await response.json();
   return user;
 });
 
-export const LogOutUser = createAsyncThunk(Logout, async (state) => {
+export const logOutUser = createAsyncThunk(Logout, async (state) => {
   const response = await fetch(`${Path}/logout`, {
     method: 'delete',
     headers: {
@@ -40,6 +41,7 @@ export const LogOutUser = createAsyncThunk(Logout, async (state) => {
     },
     body: JSON.stringify(state),
   });
+  const user = await response.json();
   return user;
 });
 
@@ -49,11 +51,11 @@ export const userSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(createUser.fulfilled, (state, action) => ({
+      .addCase(signUpUser.fulfilled, (state, action) => ({
         user: action.payload.status.data,
         lifecycle: { loading: 'loaded' },
       }))
-      .addCase(createUser.rejected, (state) => ({
+      .addCase(signUpUser.rejected, (state) => ({
         ...state,
         lifecycle: { loading: 'rejected' },
       }))

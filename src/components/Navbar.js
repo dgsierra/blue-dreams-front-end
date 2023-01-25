@@ -5,6 +5,8 @@ import Reservations from './Reservations';
 import Home from './Home';
 import Login from './Login';
 
+const MyTest = () => console.log('Sign Out');
+
 export default function Navbar() {
   return (
     <>
@@ -14,6 +16,7 @@ export default function Navbar() {
           <li><Link to="/ships">Ships</Link></li>
           <li><Link to="/reservations">Reservations</Link></li>
           <li><Link to="/login">Login</Link></li>
+          <li><button type="submit" onClick={MyTest}>Sign Out</button></li>
         </ul>
       </nav>
       <Routes>

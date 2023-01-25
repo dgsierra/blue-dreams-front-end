@@ -28,10 +28,10 @@ export const getReservation = createAsyncThunk(
 );
 
 export const postReservation = createAsyncThunk(
-  'reservation/postReservation',
+  'reservations/postReservation',
   async (object) => {
     const response = await fetch(
-      'https://blue-dreams-back-end.herokuapp.com/reservation',
+      'https://blue-dreams-back-end.herokuapp.com/reservations/',
       {
         method: 'POST',
         headers: {
@@ -49,7 +49,7 @@ export const postReservation = createAsyncThunk(
 );
 
 export const deleteReservation = createAsyncThunk(
-  'reservation/deleteReservation',
+  'reservations/deleteReservations',
   async (id) => {
     await fetch(
       `https://blue-dreams-back-end.herokuapp.com/reservation/destroy/${id}`,

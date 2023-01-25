@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import { useRef } from 'react';
 
 const Signup = ({ setCurrUser, setShow }) => {
@@ -18,7 +19,7 @@ const Signup = ({ setCurrUser, setShow }) => {
       localStorage.setItem('token', response.headers.get('Authorization'));
       setCurrUser(data);
     } catch (error) {
-      console.log('error', error);
+      alert('error', error);
     }
   };
   const handleSubmit = (e) => {

@@ -5,6 +5,7 @@ import Reservations from './Reservations';
 import Home from './Home';
 import Login from './Login';
 
+// eslint-disable-next-line no-console
 const MyTest = () => console.log('Sign Out');
 
 export default function Navbar() {

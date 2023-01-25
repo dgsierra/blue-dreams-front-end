@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable import/no-extraneous-dependencies */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -14,13 +16,14 @@ export const fetchUser = createAsyncThunk('users/user', async () => {
         'Content-Type': 'application/json',
         Authorization: localStorage.getItem('token'),
       },
-		});
+    },
+  );
+
   if (response.ok) {
     return response.json();
   }
   throw response.json();
-},
-);
+});
 
 export const userSlice = createSlice({
   name: 'user',
@@ -36,22 +39,6 @@ export const userSlice = createSlice({
         state.data = action.payload;
       });
   },
-});
-
-export const userSlice = createSlice ({
-	name: 'user',
-	initialState,
-	reducers: {},
-	extraReducers: (builder) => {
-		builder
-			.addCase(fetchUser.pending, (state) => {
-				state.status = 'loading';
-			})
-			.addCase(fetchUser.fulfilled, (state, action) => {
-				state.status = 'succeeded';
-				state.data = action.payload;
-			});
-	}
 });
 
 export default userSlice.reducer;

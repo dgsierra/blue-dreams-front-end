@@ -1,9 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = [];
 
 export const postSignup = createAsyncThunk('users/signup', async (user) => {
-  await fetch('https://blue-dreams-back-end.herokuapp.com/users', {
+  await fetch('https://blue-dreams-back-end.herokuapp.com/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -31,24 +32,6 @@ export const postLogIn = createAsyncThunk('users/login', async (user) => {
       return res.json();
     }
     return res.text().then((text) => Promise.reject(text));
-  });
-});
-
-export const deleteUser = createAsyncThunk('users/destroy', async (id) => {
-  await fetch(
-    `https://blue-dreams-back-end.herokuapp.com/users/destroy/${id}`,
-    {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: 'token',
-      },
-    }
-  ).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return res.json().then((json) => Promise.reject(json));
   });
 });
 

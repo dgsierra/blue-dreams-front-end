@@ -4,7 +4,7 @@ import { useRef } from 'react';
 const Signup = ({ setCurrUser, setShow }) => {
   const formRef = useRef();
   const signup = async (userInfo, setCurrUser) => {
-    const url = 'http://localhost:3000/signup';
+    const url = 'http://blue-dreams-back-end.herokuapp.com/signup';
     try {
       const response = await fetch(url, {
         method: 'post',

@@ -1,6 +1,5 @@
+/* eslint-disable no-param-reassign */
 // eslint-disable-next-line import/no-extraneous-dependencies
-
-
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -42,6 +41,10 @@ export const postReservation = createAsyncThunk(
         body: JSON.stringify(object),
       },
     );
+    if (response.ok) {
+      return response.json();
+    }
+    throw response.json();
   },
 );
 

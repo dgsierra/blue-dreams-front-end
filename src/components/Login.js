@@ -3,7 +3,7 @@ import { useRef } from 'react';
 const Login = ({ setCurrUser, setShow }) => {
   const formRef = useRef();
   const login = async (userInfo, setCurrUser) => {
-    const url = 'http://localhost:3000/login';
+    const url = 'http://blue-dreams-back-end.herokuapp.com/login';
     try {
       const response = await fetch(url, {
         method: 'post',

@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -5,11 +7,11 @@ const initialState = {
   status: 'idle',
 };
 
-export const fetchRegistration = createAsyncThunk(
-  'registration/fetchRegistration',
+export const fetchReservation = createAsyncThunk(
+  'reservation/fetchReservation',
   async () => {
     const response = await fetch(
-      'https://blue-dreams-back-end.herokuapp.com/registration',
+      'https://blue-dreams-back-end.herokuapp.com/reservation',
       {
         method: 'GET',
         headers: {
@@ -25,20 +27,20 @@ export const fetchRegistration = createAsyncThunk(
   },
 );
 
-export const RegistrationSlice = createSlice({
-  name: 'registration',
+export const ReservationSlice = createSlice({
+  name: 'reservation',
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchRegistration.pending, (state) => {
+      .addCase(fetchReservation.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(fetchRegistration.fulfilled, (state, action) => {
+      .addCase(fetchReservation.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.data = action.payload;
       });
   },
 });
 
-export default registrationSlice.reducer;
+export default ReservationSlice.reducer;

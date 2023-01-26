@@ -7,6 +7,7 @@ const Login = ({ setCurrUser, setShow }) => {
     try {
       const response = await fetch(url, {
         method: 'post',
+        mode: 'no-cors',
         headers: {
           'content-type': 'application/json',
           accept: 'application/json',
@@ -14,7 +15,9 @@ const Login = ({ setCurrUser, setShow }) => {
         body: JSON.stringify(userInfo),
       });
       const data = await response.json();
-      if (!response.ok) { throw data.error; }
+      if (!response.ok) {
+        throw data.error;
+      }
       localStorage.setItem('token', response.headers.get('Authorization'));
       setCurrUser(data);
     } catch (error) {
@@ -39,11 +42,11 @@ const Login = ({ setCurrUser, setShow }) => {
     <div>
       <form ref={formRef} onSubmit={handleSubmit}>
         Email:
-        {' '}
         <input type="email" name="email" placeholder="email" />
         <br />
         Password:
         {' '}
+
         <input type="password" name="password" placeholder="password" />
         <br />
         <input type="submit" value="Login" />
@@ -51,7 +54,9 @@ const Login = ({ setCurrUser, setShow }) => {
       <br />
       <div>
         Not registered yet,
-        <a href="#signup" onClick={handleClick}>Signup</a>
+        <a href="#signup" onClick={handleClick}>
+          Signup
+        </a>
       </div>
     </div>
   );

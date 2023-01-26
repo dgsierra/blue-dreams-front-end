@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Signup from './Signup';
 import Login from './Login';
 import Logout from './Logout';
-import PrivateText from './PrivateText';
+// import PrivateText from './PrivateText';
 
 const User = ({ currUser, setCurrUser }) => {
   const [show, setShow] = useState(true);
@@ -12,7 +12,7 @@ const User = ({ currUser, setCurrUser }) => {
         Hello
         {' '}
         {currUser.name}
-        <PrivateText currUser={currUser} />
+        {/* <PrivateText currUser={currUser} /> template for create login componentes */}
         <Logout setCurrUser={setCurrUser} />
       </div>
     );

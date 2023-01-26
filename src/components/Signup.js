@@ -44,7 +44,7 @@ const Signup = ({ setCurrUser, setShow }) => {
     e.preventDefault();
     setShow(true);
   };
-   
+
   return (
     <div>
       <form ref={formRef} onSubmit={handleSubmit}>

@@ -23,6 +23,7 @@ export const userSlice = createSlice({
       state.license = action.payload.license;
       state.email = action.payload.email;
       state.name = action.payload.name;
+      state.token = action.payload.token;
     },
     logOut: (state) => {
       state.data = [];
@@ -31,6 +32,7 @@ export const userSlice = createSlice({
       state.license = false;
       state.email = '';
       state.name = '';
+      state.token = null;
     },
   },
 });

@@ -20,6 +20,7 @@ const Login = ({ setCurrUser, setShow }) => {
       if (!response.ok) { throw data.error; }
 
       localStorage.setItem('token', response.headers.get('Authorization'));
+      data.token = response.headers.get('Authorization');
       dispatch(signUp(data));
       setCurrUser(data);
     } catch (error) {

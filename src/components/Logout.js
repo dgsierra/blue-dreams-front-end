@@ -1,8 +1,8 @@
 const Logout = ({ setCurrUser }) => {
   const logout = async (setCurrUser) => {
     try {
-      const response = await fetch('https://blue-dreams-back-end.herokuapp.com/logout', {
-        method: 'DELETE',
+      const response = await fetch('http://localhost:3000/logout', {
+        method: 'delete',
         headers: {
           'content-type': 'application/json',
           authorization: localStorage.getItem('token'),

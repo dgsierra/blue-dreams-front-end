@@ -22,12 +22,20 @@ const Signup = ({ setCurrUser, setShow }) => {
       alert('error', error);
     }
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(formRef.current);
     const data = Object.fromEntries(formData);
     const userInfo = {
-      user: { email: data.email, password: data.password },
+      user: {
+        name: data.name,
+        email: data.email,
+        admin: data.admin,
+        license: data.license,
+        password: data.password,
+        password_confirmation: data.password_confirmation,
+      },
     };
     signup(userInfo, setCurrUser);
     e.target.reset();
@@ -36,9 +44,18 @@ const Signup = ({ setCurrUser, setShow }) => {
     e.preventDefault();
     setShow(true);
   };
+   
   return (
     <div>
       <form ref={formRef} onSubmit={handleSubmit}>
+        Name:
+        {' '}
+        <input type="name" name="name" placeholder="name" />
+        <br />
+        Email:
+        {' '}
+        <input type="email" name="email" placeholder="email" />
+        <br />
         Email:
         {' '}
         <input type="email" name="email" placeholder="email" />
@@ -46,6 +63,10 @@ const Signup = ({ setCurrUser, setShow }) => {
         Password:
         {' '}
         <input type="password" name="password" placeholder="password" />
+        <br />
+        Password confirmation:
+        {' '}
+        <input type="password_confirmation" name="password_confirmation" placeholder="password_confirmation" />
         <br />
         <input type="submit" value="Submit" />
       </form>

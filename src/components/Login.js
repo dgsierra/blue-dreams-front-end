@@ -15,6 +15,7 @@ const Login = ({ setCurrUser, setShow }) => {
       });
       const data = await response.json();
       if (!response.ok) { throw data.error; }
+
       localStorage.setItem('token', response.headers.get('Authorization'));
       setCurrUser(data);
     } catch (error) {

@@ -1,6 +1,9 @@
 import { useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { signUp } from '../redux/reducer/user';
 
 const Login = ({ setCurrUser, setShow }) => {
+  const dispatch = useDispatch();
   const formRef = useRef();
   const login = async (userInfo, setCurrUser) => {
     const url = 'https://blue-dreams-back-end.herokuapp.com/login';
@@ -17,6 +20,7 @@ const Login = ({ setCurrUser, setShow }) => {
       if (!response.ok) { throw data.error; }
 
       localStorage.setItem('token', response.headers.get('Authorization'));
+      dispatch(signUp(data));
       setCurrUser(data);
     } catch (error) {
       console.log('error', error);

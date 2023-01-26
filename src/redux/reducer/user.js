@@ -1,44 +1,39 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable import/no-extraneous-dependencies */
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   data: [],
+  name: '',
   status: 'idle',
+  id: null,
+  admin: false,
+  license: false,
+  email: '',
 };
-
-export const fetchUser = createAsyncThunk('users/user', async () => {
-  const response = await fetch(
-    'https://blue-dreams-back-end.herokuapp.com/users',
-    {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: localStorage.getItem('token'),
-      },
-    },
-  );
-
-  if (response.ok) {
-    return response.json();
-  }
-  throw response.json();
-});
 
 export const userSlice = createSlice({
   name: 'user',
   initialState,
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchUser.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchUser.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.data = action.payload;
-      });
+  reducers: {
+    signUp: (state, action) => {
+      state.data = action.payload;
+      state.id = action.payload.id;
+      state.admin = action.payload.admin;
+      state.license = action.payload.license;
+      state.email = action.payload.email;
+      state.name = action.payload.name;
+    },
+    logOut: (state) => {
+      state.data = [];
+      state.id = null;
+      state.admin = false;
+      state.license = false;
+      state.email = '';
+      state.name = '';
+    },
   },
 });
 
+export const { signUp, logOut } = userSlice.actions;
 export default userSlice.reducer;

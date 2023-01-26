@@ -1,3 +1,6 @@
+import { useDispatch } from 'react-redux';
+import { logOut } from '../redux/reducer/user';
+const dispatch = useDispatch();
 const Logout = ({ setCurrUser }) => {
   const logout = async (setCurrUser) => {
     try {
@@ -11,6 +14,7 @@ const Logout = ({ setCurrUser }) => {
       const data = await response.json();
       if (!response.ok) throw data.error;
       localStorage.removeItem('token');
+      dispatch(logOut());
       setCurrUser(null);
     } catch (error) {
       console.log('error', error);

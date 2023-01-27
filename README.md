@@ -1,12 +1,84 @@
-# Getting Started with Create React App
+# 📖 Blue Dream Yatch Booking App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+#### Link to Rails App [Blue Dreams Booking Backend](git@github.com:dgonzalesi/blue-dreams-back-end.git)
 
-### `npm start`
+# Description
+
+Blue Dream Yatch Booking Frontend App is an application where the user can register new accounts, login and reserve a set of differents Yatchs. This project has been built using React/Redux that will be connected with Rails in the backend.
+
+## Built With
+
+- HTML
+- JS
+- CSS
+- JSX
+- ReactJS
+- Redux
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demos and Importand links <a name="live-demo"></a>
+
+- [Blue Dreams Front-end Deployment link](/)
+
+- [Blue Dreams Backend deployment link](https://blue-dreams-back-end.herokuapp.com/ships/index/)
+
+## Kanbanboard
+
+- [Kanban board link](https://github.com/users/dgonzalesi/projects/9)
+- [Kanban board initial state + screenshots + initial colaborators]
+
+- The final number of colaborators is 5:
+   - @renercrows
+   - @robinbenitezmora 
+   - @dgonzalesi
+   - @diegoh40
+   - @andym80
+
+## Screenshots
+
+C:\Users\Robin\Desktop\Files\Pictures
+slide_card.png
+policy.png
+booking_form.png
+login.png
+about.png
+
+
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally. Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+- IDE(code editor) like: **Vscode**, **Sublime**, etc.
+- [Git](https://www.linode.com/docs/guides/how-to-install-git-on-linux-mac-and-windows/)
+
+### To launch the project locally:
+
+#### Step 1:
+
+- Clone this repo locally using git and the following git command
+
+  ```sh
+  git clone https://github.com/dgonzalesi/blue-dreams-front-end
+  ```
+
+#### Step 2:
+
+```sh
+ npm install
+```
+
+#### Step 3:
+
+```sh
+ npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,57 +86,109 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+<!-- AUTHORS -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 👥 Authors <a name="authors"></a>
 
-### `npm run build`
+<div id="badges"align="center">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 👤 **Maximiliano Ungredda**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+</div>
+<div id="badges"align="center">
+  <a href="https://www.linkedin.com/in/maximiliano-ungredda/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://github.com/renercrows">
+    <img src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" alt="Github Badge"/>
+  </a>
+  <a href="https://twitter.com/">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+  </a>
+</div>
+<div id="badges"align="center">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 👤 **Robin Benitez**
 
-### `npm run eject`
+</div>
+<div id="badges"align="center">
+  <a href="https://www.linkedin.com/in/robin-benitez-mora/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://github.com/robinbenitezmora">
+    <img src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" alt="Github Badge"/>
+  </a>
+  <a href="https://twitter.com/mecanico_robin">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+  </a>
+</div>
+<div id="badges"align="center">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 👤 **Diego Hernández**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+</div>
+<div id="badges"align="center">
+  <a href="https://www.linkedin.com/in/diegoarturoh/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://github.com/diegoh40">
+    <img src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" alt="Github Badge"/>
+  </a>
+  <a href="https://twitter.com/Diegoart80">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+  </a>
+</div>
+<div id="badges"align="center">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 👤 **Daniel Gonzales**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+</div>
 
-## Learn More
+<div id="badges"align="center">
+  <a href="https://www.linkedin.com/in/daniel-g-sierra-60472719">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://github.com/dgonzalesi/">
+    <img src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" alt="Github Badge"/>
+  </a>
+  <a href="https://twitter.com/dgonzalesi">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+  </a>
+</div>
+<div id="badges"align="center">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 👤 **Andy Menutti**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+</div>
 
-### Code Splitting
+<div id="badges"align="center">
+  <a href="http://linkedin.com/in/andres-menutti/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://github.com/andym80/">
+    <img src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" alt="Github Badge"/>
+  </a>
+  <a href="http://linkedin.com/in/andres-menutti/">
+    <img src="https://img.shields.io/badge/Twitter-blue?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter Badge"/>
+  </a>
+</div>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Analyzing the Bundle Size
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions, issues, and feature requests are welcome!
 
-### Making a Progressive Web App
+Feel free to check the [issues page](../../issues/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Show your support
 
-### Advanced Configuration
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
+- We want to say thank you to [Murat Korkmaz](https://www.behance.net/muratk) on Behance the creator of this beautiful [design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) that we used as a guide to build our project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📝 License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./MIT.md) licensed.

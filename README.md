@@ -2,8 +2,6 @@
 
 
 
-#### Link to Rails App [Blue Dreams Booking Backend](git@github.com:dgonzalesi/blue-dreams-back-end.git)
-
 # Description
 
 Blue Dream Yatch Booking Frontend App is an application where the user can register new accounts, login and reserve a set of differents Yatchs. This project has been built using React/Redux that will be connected with Rails in the backend.

@@ -1,0 +1,12 @@
+.btn-hover {
+  width: auto;
+}
+
+.btn-hover:hover {
+  background-color: #39b6d2;
+  color: white;
+}
+
+a {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

@@ -10,7 +10,7 @@ const Signup = ({ setCurrUser, setShow }) => {
     const url = 'https://blue-dreams-back-end.herokuapp.com/signup';
     try {
       const response = await fetch(url, {
-        method: 'post',
+        method: 'POST',
         headers: {
           'content-type': 'application/json',
           accept: 'application/json',
@@ -25,7 +25,7 @@ const Signup = ({ setCurrUser, setShow }) => {
       console.log('data', data);
       setCurrUser(data);
     } catch (error) {
-      alert('error', error);
+      console.log('error', error);
     }
   };
 
@@ -52,37 +52,26 @@ const Signup = ({ setCurrUser, setShow }) => {
   };
 
   return (
-    <div>
+    <div className="mt-5 bg-primary w-50 mx-auto">
       <form ref={formRef} onSubmit={handleSubmit}>
-        Name:
-        {' '}
-        <input type="name" name="name" placeholder="name" />
-        <br />
-        Email:
-        {' '}
-        <input type="email" name="email" placeholder="email" />
-        <br />
-        Email:
-        {' '}
-        <input type="email" name="email" placeholder="email" />
-        <br />
-        Password:
-        {' '}
-        <input type="password" name="password" placeholder="password" />
-        <br />
-        Password confirmation:
-        {' '}
-        <input type="password_confirmation" name="password_confirmation" placeholder="password_confirmation" />
-        <br />
+        <label htmlFor="name" className="form-label ms-auto text-light mt-3">
+          <input type="name" name="name" placeholder="name" />
+        </label>
+
+        <label htmlFor="email" className="form-label ms-auto text-light mt-3">
+          <input type="email" name="email" placeholder="email" className="form-control mt-2 w-50 mx-auto" required />
+        </label>
+        <label htmlFor="password" className="form-label ms-auto text-light">
+          <input type="password" name="password" placeholder="password" className="form-control mt-2 w-50 mx-auto" required />
+        </label>
+
+        <input type="submit" value="Submit" className="btn btn-danger text-decoration-none mt-1 ms-3 mb-5" />
+        <a href="#login" onClick={handleClick} className="btn btn-success text-decoration-none mt-1 ms-3 mb-5">Login</a>
+        <label htmlFor="password_confirmation" className="form-label ms-auto text-light">
+          <input type="password_confirmation" name="password_confirmation" placeholder="password_confirmation" />
+        </label>
         <input type="submit" value="Submit" />
       </form>
-      <br />
-      <div>
-        Already registered,
-        <a href="#login" onClick={handleClick}>Login</a>
-        {' '}
-        here.
-      </div>
     </div>
   );
 };

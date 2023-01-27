@@ -9,7 +9,7 @@ const Login = ({ setCurrUser, setShow }) => {
     const url = 'https://blue-dreams-back-end.herokuapp.com/login';
     try {
       const response = await fetch(url, {
-        method: 'post',
+        method: 'POST',
         headers: {
           'content-type': 'application/json',
           accept: 'application/json',
@@ -24,6 +24,7 @@ const Login = ({ setCurrUser, setShow }) => {
       dispatch(signUp(data));
       setCurrUser(data);
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.log('error', error);
     }
   };
@@ -42,23 +43,17 @@ const Login = ({ setCurrUser, setShow }) => {
     setShow(false);
   };
   return (
-    <div>
-      <form ref={formRef} onSubmit={handleSubmit}>
-        Email:
-        {' '}
-        <input type="email" name="email" placeholder="email" />
-        <br />
-        Password:
-        {' '}
-        <input type="password" name="password" placeholder="password" />
-        <br />
-        <input type="submit" value="Login" />
+    <div className="mt-5 p-5 mx-auto">
+      <form ref={formRef} onSubmit={handleSubmit} className="bg-primary w-50 mx-auto p-5">
+        <label htmlFor="email" className="form-label ms-2 text-light mt-3">
+          <input type="email" name="email" placeholder="email" className="form-control mt-2 mx-auto" required />
+        </label>
+        <label htmlFor="password" className="form-label ms-2 text-light">
+          <input type="password" name="password" placeholder="password" className="form-control mt-2 mx-auto" required />
+        </label>
+        <input type="submit" value="Login" className="btn btn-success ms-2 mt-1 mb-2" />
+        <a href="#signup" onClick={handleClick} className="btn btn-danger text-decoration-none mt-1 ms-3 mb-2">Signup</a>
       </form>
-      <br />
-      <div>
-        Not registered yet,
-        <a href="#signup" onClick={handleClick}>Signup</a>
-      </div>
     </div>
   );
 };

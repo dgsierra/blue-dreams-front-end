@@ -13,7 +13,7 @@ const Ships = () => {
       <h1 className="mt-5 text-center">SHIPS CATALOG</h1>
       <div id="carouselExampleInterval" className="carousel slide w-75 mt-5 mx-auto" data-bs-ride="carousel">
         <div className="carousel-inner ms-2">
-          {isFetching ? <h1>Loading</h1> : ships.map((ship, index) => (
+          {isFetching ? <h1>Loading...</h1> : ships.map((ship, index) => (
             <div key={ship.id} className={index === 0 ? 'carousel-item active' : 'carousel-item mt-5'} data-bs-interval="2000">
               <img src={ship.image} className="ships-img w-50 mx-auto d-block mt-5" alt="ships" />
               <h4 className="text-center text-secondary mt-5">

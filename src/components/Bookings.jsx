@@ -47,14 +47,16 @@ export default function Bookings() {
               <form>
                 <fieldset className="p-5">
                   <div className="mb-3">
-                    <label htmlFor="disabledSelect" className="form-label text-light">Ships</label>
-                    <select id="disabledSelect" className="form-select">
-                      <option>Select</option>
-                      <option>YT-H5</option>
-                      <option>SPEEDER</option>
-                      <option>GWT-RH</option>
-                      <option>MT-TRAVEL</option>
-                    </select>
+                    <label htmlFor="disabledSelect" className="form-label text-light">
+                      Ships
+                      <select name="disabledSelect" id="disabledSelect" className="form-select">
+                        <option>Select</option>
+                        <option>YT-H5</option>
+                        <option>SPEEDER</option>
+                        <option>GWT-RH</option>
+                        <option>MT-TRAVEL</option>
+                      </select>
+                    </label>
                   </div>
                   <div className="mb-3">
                     <label htmlFor="city" className="form-label text-light">

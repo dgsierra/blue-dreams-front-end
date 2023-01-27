@@ -7,7 +7,7 @@ import yatch1 from '../assets/yatch1.png';
 import { useFetchShipsQuery } from '../redux/slices/ships-slice';
 
 // const { data: ships, isFetching } = useFetchShipsQuery();
-
+console.log('ships', useFetchShipsQuery);
 const Ships = () => (
   <div className="bg-image1">
     <br />

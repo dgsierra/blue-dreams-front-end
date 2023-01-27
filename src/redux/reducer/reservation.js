@@ -7,13 +7,13 @@ const initialState = {
   status: 'idle',
 };
 
-export const getReservation = createAsyncThunk(
-  'reservation/getReservation',
-  async () => {
+    // 1. Create the request URL
     const response = await fetch(
-      'https://blue-dreams-back-end.herokuapp.com/reservation',
+      'https://blue-dreams-back-end.herokuapp.com/reservation/index',
       {
+        // 2. Specify the HTTP method
         method: 'GET',
+        // 3. Specify the request headers
         headers: {
           'Content-Type': 'application/json',
           Authorization: localStorage.getItem('token'),
@@ -23,15 +23,14 @@ export const getReservation = createAsyncThunk(
     if (response.ok) {
       return response.json();
     }
-    throw response.json();
+    throw await response.json();
   },
 );
-
 export const postReservation = createAsyncThunk(
   'reservations/postReservation',
   async (object) => {
     const response = await fetch(
-      'https://blue-dreams-back-end.herokuapp.com/reservations/',
+      'https://blue-dreams-back-end.herokuapp.com/reservations',
       {
         method: 'POST',
         headers: {
@@ -44,7 +43,7 @@ export const postReservation = createAsyncThunk(
     if (response.ok) {
       return response.json();
     }
-    throw response.json();
+    throw await response.json();
   },
 );
 
@@ -90,6 +89,10 @@ export const reservationSlice = createSlice({
       .addCase(deleteReservation.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.data = action.payload;
+      })
+      .addCase(deleteReservation.rejected, (state) => {
+        state.status = 'failed';
+        state.data = null;
       });
   },
 });

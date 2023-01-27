@@ -3,10 +3,10 @@ import { useRef } from 'react';
 const Login = ({ setCurrUser, setShow }) => {
   const formRef = useRef();
   const login = async (userInfo, setCurrUser) => {
-    const url = 'http://localhost:3000/login';
+    const url = 'https://blue-dreams-back-end.herokuapp.com/login';
     try {
       const response = await fetch(url, {
-        method: 'post',
+        method: 'POST',
         headers: {
           'content-type': 'application/json',
           accept: 'application/json',
@@ -36,23 +36,19 @@ const Login = ({ setCurrUser, setShow }) => {
     setShow(false);
   };
   return (
-    <div>
-      <form ref={formRef} onSubmit={handleSubmit}>
-        Email:
+    <div className="mt-5 p-5 mx-auto">
+      <form ref={formRef} onSubmit={handleSubmit} className="bg-primary w-50 mx-auto p-5">
+        <label className="form-label ms-2 text-light mt-3">Email:</label>
         {' '}
-        <input type="email" name="email" placeholder="email" />
+        <input type="email" name="email" placeholder="email" className="form-control mt-2 mx-auto" required />
         <br />
-        Password:
+        <label className="form-label ms-2 text-light">Password:</label>
         {' '}
-        <input type="password" name="password" placeholder="password" />
+        <input type="password" name="password" placeholder="password" className="form-control mt-2 mx-auto" required />
         <br />
-        <input type="submit" value="Login" />
+        <input type="submit" value="Login" className="btn btn-success ms-2 mt-1 mb-2" />
+        <a href="#signup" onClick={handleClick} className="btn btn-danger text-decoration-none mt-1 ms-3 mb-2">Signup</a>
       </form>
-      <br />
-      <div>
-        Not registered yet,
-        <a href="#signup" onClick={handleClick}>Signup</a>
-      </div>
     </div>
   );
 };

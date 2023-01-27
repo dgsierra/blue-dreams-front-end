@@ -1,0 +1,9 @@
+.bg-1 {
+  background-image: url("../assets/bn1.png");
+  background-size: cover;
+}
+
+.btn-bg {
+  background-color: #049bcb;
+  border: none;
+}

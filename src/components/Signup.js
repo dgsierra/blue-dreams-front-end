@@ -4,10 +4,10 @@ import { useRef } from 'react';
 const Signup = ({ setCurrUser, setShow }) => {
   const formRef = useRef();
   const signup = async (userInfo, setCurrUser) => {
-    const url = 'http://localhost:3000/signup';
+    const url = 'https://blue-dreams-back-end.herokuapp.com/signup';
     try {
       const response = await fetch(url, {
-        method: 'post',
+        method: 'POST',
         headers: {
           'content-type': 'application/json',
           accept: 'application/json',
@@ -19,7 +19,7 @@ const Signup = ({ setCurrUser, setShow }) => {
       localStorage.setItem('token', response.headers.get('Authorization'));
       setCurrUser(data);
     } catch (error) {
-      alert('error', error);
+      console.log('error', error);
     }
   };
   const handleSubmit = (e) => {
@@ -37,25 +37,19 @@ const Signup = ({ setCurrUser, setShow }) => {
     setShow(true);
   };
   return (
-    <div>
+    <div className="mt-5 bg-primary w-50 mx-auto">
       <form ref={formRef} onSubmit={handleSubmit}>
-        Email:
+      <label className="form-label ms-auto text-light mt-3">Email:</label>
         {' '}
-        <input type="email" name="email" placeholder="email" />
+        <input type="email" name="email" placeholder="email" className="form-control mt-2 w-50 mx-auto" required />
         <br />
-        Password:
+        <label className="form-label ms-auto text-light">Password:</label>
         {' '}
-        <input type="password" name="password" placeholder="password" />
+        <input type="password" name="password" placeholder="password" className="form-control mt-2 w-50 mx-auto" required />
         <br />
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" className="btn btn-danger text-decoration-none mt-1 ms-3 mb-5" />
+        <a href="#login" onClick={handleClick} className="btn btn-success text-decoration-none mt-1 ms-3 mb-5">Login</a>
       </form>
-      <br />
-      <div>
-        Already registered,
-        <a href="#login" onClick={handleClick}>Login</a>
-        {' '}
-        here.
-      </div>
     </div>
   );
 };

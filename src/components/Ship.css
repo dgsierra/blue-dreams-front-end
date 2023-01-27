@@ -1,0 +1,10 @@
+.bg-image1 {
+  background-image: url("../assets/bk3.png");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.bg2 {
+  background-color: #cecece;
+}

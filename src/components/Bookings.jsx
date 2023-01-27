@@ -88,7 +88,7 @@ export default function Bookings() {
                       </span>
                     </div>
                     <div className="text-center d-flex justify-content-center row">
-                      <label htmlFor="Select" className="form-label mt-3 text-light">Cost</label>
+                      <p htmlFor="Select" className="form-label mt-3 text-light">Cost</p>
                       <card type="display" className="form-control form1 p-3 w-50" />
                     </div>
                   </div>

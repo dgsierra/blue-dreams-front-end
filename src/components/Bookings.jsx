@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import './Booking.css';
+import DatePicker from 'react-datepicker';
 
 const formComponent = () => {
   const [startDate, setStartDate] = useState(new Date());
-  console.log(formComponent);
   return (
     <DatePicker
       selected={startDate}
@@ -17,7 +17,7 @@ const formComponent = () => {
     />
   );
 };
-
+console.log(formComponent);
 export default function Bookings() {
   return (
     <div className="bg1">

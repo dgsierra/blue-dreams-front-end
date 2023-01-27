@@ -1,3 +1,7 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable max-len */
 import React from 'react';
 import './Booking.css';
 
@@ -43,12 +47,12 @@ export default function Bookings() {
             <div className="modal-content bg2">
               <div className="modal-header">
                 <h5 className="modal-title text-light" id="staticBackdropLabel">BOOKING</h5>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
               </div>
               <form>
                 <fieldset className="p-5">
                   <div className="mb-3">
-                    <label for="disabledSelect" className="form-label text-light">Ships</label>
+                    <label htmlFor="disabledSelect" className="form-label text-light">Ships</label>
                     <select id="disabledSelect" className="form-select">
                       <option>Select</option>
                       <option>YT-H5</option>
@@ -58,7 +62,7 @@ export default function Bookings() {
                     </select>
                   </div>
                   <div className="mb-3">
-                    <label for="Select" className="form-label text-light">City</label>
+                    <label htmlFor="Select" className="form-label text-light">City</label>
                     <select id="Select" className="form-select">
                       <option>Select</option>
                       <option>Cartagena</option>
@@ -68,26 +72,26 @@ export default function Bookings() {
                     </select>
                   </div>
                   <div className="mb-3">
-                    <label for="Select" className="bg form-label text-light">Start Date</label>
+                    <label htmlFor="Select" className="bg form-label text-light">Start Date</label>
                     <div className="input-group date" id="datepicker">
                       <input type="text" className="form-control" />
                       <span className="input-group-append">
                         <span className="input-group-text bg-white">
-                          <i className="fa fa-calendar"></i>
+                          <i className="fa fa-calendar" />
                         </span>
                       </span>
                     </div>
-                    <label for="disabledSelect" className="form-label mt-3 text-light">End Date</label>
+                    <label htmlFor="disabledSelect" className="form-label mt-3 text-light">End Date</label>
                     <div className="input-group date" id="datepicker">
                       <input type="text" className="form-control" />
                       <span className="input-group-append">
                         <span className="input-group-text bg-white">
-                          <i className="fa fa-calendar"></i>
+                          <i className="fa fa-calendar" />
                         </span>
                       </span>
                     </div>
                     <div className="text-center d-flex justify-content-center row">
-                      <label for="Select" className="form-label mt-3 text-light">Cost</label>
+                      <label htmlFor="Select" className="form-label mt-3 text-light">Cost</label>
                       <card type="display" className="form-control form1 p-3 w-50" />
                     </div>
                   </div>

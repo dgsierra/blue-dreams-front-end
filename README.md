@@ -19,7 +19,9 @@ Blue Dream Yatch Booking Frontend App is an application where the user can regis
 
 ## 🚀 Live Demos and Importand links <a name="live-demo"></a>
 
-- [Blue Dreams Front-end Deployment link](/)
+- [Blue Dreams Front-end Deployment link](https://develop.d394vyctawdkiv.amplifyapp.com/)
+
+- [Blue Dreams Backend Website link](https://github.com/dgonzalesi/blue-dreams-back-end)
 
 - [Blue Dreams Backend deployment link](https://blue-dreams-back-end.herokuapp.com/ships/index/)
 

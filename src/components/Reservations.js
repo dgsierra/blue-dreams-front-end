@@ -1,7 +1,17 @@
-import React from 'react';
 import yatch1 from '../assets/yatch1.png';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+// import { useFetchReservationsQuery } from '../redux/reducer/reservation';
+import { fetchReservations } from '../redux/slices/reservationsSlice';
+
 
 export default function Reservations() {
+  const reservation = useSelector((state) => state.reservations.reservations);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchReservations());
+  }, []);
+  console.log('reservation', reservation);
   return (
     <div className="mt-5">
       <br />

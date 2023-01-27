@@ -1,15 +1,21 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
 import './Navbar.css';
 import logo1 from '../assets/logo.png';
+import Bookings from './Bookings';
+import Login from './Login';
+import { React, useState } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 import Ships from './Ships';
 import Reservations from './Reservations';
-import Bookings from './Bookings';
 import About from './About';
-import Login from './Login';
+import Policy from './Policy';
+import User from './User';
+import { useFetchShipsQuery } from '../redux/slices/ships-slice';
 
-// eslint-disable-next-line no-console
 export default function Navbar() {
+  const [currUser, setCurrUser] = useState(null);
+  const { data: ships, isFetching } = useFetchShipsQuery();
+  console.log('ships', ships);
+  console.log('isFetching', isFetching);
   return (
     <>
       <nav className="navbar navbar-dark bg-primary fixed-top">
@@ -60,6 +66,7 @@ export default function Navbar() {
         <Route path="/booking" element={<Bookings />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<h1>404: Not Found</h1>} />
       </Routes>
     </>
   );

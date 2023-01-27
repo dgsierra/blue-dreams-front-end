@@ -1,8 +1,12 @@
 import React from 'react';
+
 import './Ship.css';
 import img1 from '../assets/anchor1.png';
 import img2 from '../assets/anchor2.png';
 import yatch1 from '../assets/yatch1.png';
+import { useFetchShipsQuery } from '../redux/slices/ships-slice';
+
+// const { data: ships, isFetching } = useFetchShipsQuery();
 
 const Ships = () => (
   <div className="bg-image1">
@@ -37,4 +41,3 @@ const Ships = () => (
 );
 
 export default Ships;
-

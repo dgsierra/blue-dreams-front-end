@@ -1,8 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { logOut } from '../redux/reducer/user';
-const dispatch = useDispatch();
+
 const Logout = ({ setCurrUser }) => {
   const logout = async (setCurrUser) => {
+    const dispatch = useDispatch();
     try {
       const response = await fetch('https://blue-dreams-back-end.herokuapp.com/logout', {
         method: 'delete',

@@ -1,6 +1,22 @@
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useState } from 'react';
 import './Booking.css';
+
+const formComponent = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  console.log(formComponent);
+  return (
+    <DatePicker
+      selected={startDate}
+      onChange={(date) => setStartDate(date)}
+      dateFormat="dd/MM/yyyy"
+      placeholderText="Select a Date"
+      className="calendar"
+      showYearDropdown
+      scrollableMonthYearDropdown
+    />
+  );
+};
 
 export default function Bookings() {
   return (
@@ -44,6 +60,7 @@ export default function Bookings() {
             <div className="modal-content bg2">
               <div className="modal-header">
                 <h5 className="modal-title text-light" id="staticBackdropLabel">BOOKING</h5>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
               </div>
               <form>

@@ -7,3 +7,18 @@
   background-color: #60bcd9;
   border: none;
 }
+
+.form-control {
+  background-color: #fff;
+  border: none;
+  width: 70%;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 6rem;
+  border-color: rgb(223, 240, 234);
+}

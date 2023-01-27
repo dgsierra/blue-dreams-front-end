@@ -12,7 +12,7 @@ const User = ({ currUser, setCurrUser }) => {
         Hello
         {' '}
         {currUser.name}
-        {/* <PrivateText currUser={currUser} /> template for create login componentes */}
+        {/* <PrivateText currUser={currUser} /> template for create login components */}
         <Logout setCurrUser={setCurrUser} />
       </div>
     );

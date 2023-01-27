@@ -22,9 +22,11 @@ export default function Navbar() {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="offcanvas offcanvas-start text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div className="float-end me-3">
+              <button type="button" className="btn-close btn-close-dark mt-3" data-bs-dismiss="offcanvas" aria-label="Close" />
+            </div>
             <div className="offcanvas-header">
               <img src={logo1} className="w-50 mx-auto" alt="Blue Dram Logo" />
-              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" />
             </div>
             <div>
               <ul className="navbar-nav text-start pe-3">

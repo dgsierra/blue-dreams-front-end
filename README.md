@@ -37,12 +37,12 @@ Blue Dream Yatch Booking Frontend App is an application where the user can regis
 
 ## Screenshots
 
-C:\Users\Robin\Desktop\Files\Pictures
-slide_card.png
-policy.png
-booking_form.png
-login.png
-about.png
+![first_screen](https://user-images.githubusercontent.com/90795408/215131254-9b0ecef1-dada-4814-bfd7-873375215da1.png)
+![slide_card](https://user-images.githubusercontent.com/90795408/215131409-911932da-5ef9-4677-9a71-12f83b215082.png)
+![policy](https://user-images.githubusercontent.com/90795408/215131559-7020c9fa-a3a8-4263-969d-8d37f4ef39aa.png)
+![booking_form](https://user-images.githubusercontent.com/90795408/215131668-0c9055d1-9d61-4aec-b8b9-ed73469fdb41.png)
+![login](https://user-images.githubusercontent.com/90795408/215131774-76589b06-3b2e-4d65-9804-eed0cdf69a63.png)
+![about](https://user-images.githubusercontent.com/90795408/215131889-b6dff296-866b-4c4a-ac53-c19860dd5a39.png)
 
 
 ## Getting Started

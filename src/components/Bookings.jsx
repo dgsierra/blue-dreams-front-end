@@ -1,23 +1,7 @@
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import React from 'react';
 import './Booking.css';
-import DatePicker from 'react-datepicker';
 
-const formComponent = () => {
-  const [startDate, setStartDate] = useState(new Date());
-  return (
-    <DatePicker
-      selected={startDate}
-      onChange={(date) => setStartDate(date)}
-      dateFormat="dd/MM/yyyy"
-      placeholderText="Select a Date"
-      className="calendar"
-      showYearDropdown
-      scrollableMonthYearDropdown
-    />
-  );
-};
-console.log(formComponent);
 export default function Bookings() {
   return (
     <div className="bg1">

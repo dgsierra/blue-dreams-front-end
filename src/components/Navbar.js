@@ -1,18 +1,15 @@
 import './Navbar.css';
+import { React } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import logo1 from '../assets/logo.png';
 import Bookings from './Bookings';
 import Login from './Login';
-import { React, useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
 import Ships from './Ships';
 import Reservations from './Reservations';
 import About from './About';
-import Policy from './Policy';
-import User from './User';
 import { useFetchShipsQuery } from '../redux/slices/ships-slice';
 
 export default function Navbar() {
-  const [currUser, setCurrUser] = useState(null);
   const { data: ships, isFetching } = useFetchShipsQuery();
   console.log('ships', ships);
   console.log('isFetching', isFetching);
@@ -26,8 +23,8 @@ export default function Navbar() {
           </button>
           <div className="offcanvas offcanvas-start text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
             <div className="offcanvas-header">
-              <img src={logo1} className="w-50 mx-auto" />
-              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <img src={logo1} className="w-50 mx-auto" alt="Blue Dram Logo" />
+              <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" />
             </div>
             <div>
               <ul className="navbar-nav text-start pe-3">
@@ -40,19 +37,19 @@ export default function Navbar() {
             </div>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
             <div className="container ms-4 mt-5">
-              <a href="https://facebook.com" className="btn btn-social-icon btn-twitter ms-3" target="_blank">
+              <a href="https://facebook.com" className="btn btn-social-icon btn-twitter ms-3" target="_blank" rel="noreferrer">
                 <span className="fa-stack fa-2x mt-5">
-                  <i className="fa fa-facebook mt-5"></i>
+                  <i className="fa fa-facebook mt-5" />
                 </span>
               </a>
-              <a href="https://twitter.com" className="btn btn-social-icon btn-twitter" target="_blank">
+              <a href="https://twitter.com" className="btn btn-social-icon btn-twitter" target="_blank" rel="noreferrer">
                 <span className="fa-stack fa-2x mt-5">
-                  <i className="fa fa-twitter mt-5"></i>
+                  <i className="fa fa-twitter mt-5" />
                 </span>
               </a>
-              <a href="https://gmail.com" className="btn btn-social-icon btn-twitter" target="_blank">
+              <a href="https://gmail.com" className="btn btn-social-icon btn-twitter" target="_blank" rel="noreferrer">
                 <span className="fa-stack fa-2x mt-5">
-                  <i className="fa fa-google mt-5"></i>
+                  <i className="fa fa-google mt-5" />
                 </span>
               </a>
             </div>

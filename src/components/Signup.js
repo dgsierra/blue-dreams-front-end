@@ -54,16 +54,22 @@ const Signup = ({ setCurrUser, setShow }) => {
   return (
     <div className="mt-5 bg-primary w-50 mx-auto">
       <form ref={formRef} onSubmit={handleSubmit}>
-        <label className="form-label ms-auto text-light mt-3">Name:</label>
-        <input type="name" name="name" placeholder="name" />
-        <label className="form-label ms-auto text-light mt-3">Email:</label>
-        <input type="email" name="email" placeholder="email" className="form-control mt-2 w-50 mx-auto" required />
-        <label className="form-label ms-auto text-light">Password:</label>
-        <input type="password" name="password" placeholder="password" className="form-control mt-2 w-50 mx-auto" required />
+        <label htmlFor="name" className="form-label ms-auto text-light mt-3">
+          <input type="name" name="name" placeholder="name" />
+        </label>
+
+        <label htmlFor="email" className="form-label ms-auto text-light mt-3">
+          <input type="email" name="email" placeholder="email" className="form-control mt-2 w-50 mx-auto" required />
+        </label>
+        <label htmlFor="password" className="form-label ms-auto text-light">
+          <input type="password" name="password" placeholder="password" className="form-control mt-2 w-50 mx-auto" required />
+        </label>
+
         <input type="submit" value="Submit" className="btn btn-danger text-decoration-none mt-1 ms-3 mb-5" />
         <a href="#login" onClick={handleClick} className="btn btn-success text-decoration-none mt-1 ms-3 mb-5">Login</a>
-        <label className="form-label ms-auto text-light">Password Confirmation:</label>
-        <input type="password_confirmation" name="password_confirmation" placeholder="password_confirmation" />
+        <label htmlFor="password_confirmation" className="form-label ms-auto text-light">
+          <input type="password_confirmation" name="password_confirmation" placeholder="password_confirmation" />
+        </label>
         <input type="submit" value="Submit" />
       </form>
     </div>

@@ -1,9 +1,8 @@
-import yatch1 from '../assets/yatch1.png';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import yatch1 from '../assets/yatch1.png';
 // import { useFetchReservationsQuery } from '../redux/reducer/reservation';
 import { fetchReservations } from '../redux/slices/reservationsSlice';
-
 
 export default function Reservations() {
   const reservation = useSelector((state) => state.reservations.reservations);
@@ -40,8 +39,7 @@ export default function Reservations() {
                   </div>
                 </div>
               </div>
-                
-                
+
             </div>
           </div>
         </div>

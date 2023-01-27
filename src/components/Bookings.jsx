@@ -49,7 +49,7 @@ export default function Bookings() {
               <form>
                 <fieldset className="p-5">
                   <div className="mb-3">
-                    <label htmlFor="disabledSelect" className="form-label text-light">Ships</label>
+                    <p className="form-label text-light">Ships</p>
                     <select id="disabledSelect" className="form-select">
                       <option>Select</option>
                       <option>YT-H5</option>
@@ -59,8 +59,8 @@ export default function Bookings() {
                     </select>
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="Select" className="form-label text-light">City</label>
-                    <select id="Select" className="form-select">
+                    <p className="form-label text-light">City</p>
+                    <select name="select" id="Select" className="form-select">
                       <option>Select</option>
                       <option>Cartagena</option>
                       <option>Lecherias</option>
@@ -69,7 +69,7 @@ export default function Bookings() {
                     </select>
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="Select" className="bg form-label text-light">Start Date</label>
+                    <p htmlFor="Select" className="bg form-label text-light">Start Date</p>
                     <div className="input-group date" id="datepicker">
                       <input type="text" className="form-control" />
                       <span className="input-group-append">
@@ -78,7 +78,7 @@ export default function Bookings() {
                         </span>
                       </span>
                     </div>
-                    <label htmlFor="disabledSelect" className="form-label mt-3 text-light">End Date</label>
+                    <p className="form-label mt-3 text-light">End Date</p>
                     <div className="input-group date" id="datepicker">
                       <input type="text" className="form-control" />
                       <span className="input-group-append">

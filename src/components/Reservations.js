@@ -6,6 +6,7 @@ import { useFetchShipsQuery } from '../redux/slices/ships-slice';
 
 export default function Reservations() {
   const reservation = useSelector((state) => state.reservations.reservations);
+  const user = useSelector((state) => state.user);
   const { data: ships, isFetching } = useFetchShipsQuery();
   const [reservations, setReservations] = useState([]);
   const localShips = {};
@@ -24,7 +25,7 @@ export default function Reservations() {
   }, []);
   useEffect(() => {
     setReservations(reservation);
-  }, [reservation]);
+  }, []);
 
   console.log('reservation', reservation);
   return (
@@ -33,11 +34,12 @@ export default function Reservations() {
       <br />
       <br />
       <h1 className="text-center">RESERVATIONS</h1>
+      <br />
       <div className="container">
-        {reservations.map((res) => {
+        { user !== 'success' ? <h1 className="text-center"> You need to signUp to make a reservation </h1> : reservations.map((res) => {
           const currentId = res.id;
           console.log('currentId', currentId);
-          console.log('localShips', localShips[currentId]);
+          console.log('localShips', localShips);
           return (
             <div key={res.id} className="card mb-3 w-75 mx-auto mt-5">
               <div className="row g-0">

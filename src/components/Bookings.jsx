@@ -2,8 +2,28 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
-import React from 'react';
+import React, { useState } from 'react';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+// CSS Modules, react-datepicker-cssmodules.css
+// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import './Booking.css';
+
+const FormComponent = () => {
+  const [startDate, setStartDate] = useState(new Date());
+
+  return (
+    <DatePicker
+      selected={startDate}
+      onChange={(date) => setStartDate(date)}
+      dateFormat="dd/MM/yyyy"
+      placeholderText="Select a Date"
+      className="calendar"
+      showYearDropdown
+      scrollableMonthYearDropdown
+    />
+  );
+};
 
 export default function Bookings() {
   return (
@@ -77,7 +97,7 @@ export default function Bookings() {
                       <input type="text" className="form-control" />
                       <span className="input-group-append">
                         <span className="input-group-text bg-white">
-                          <i className="fa fa-calendar" />
+                          <FormComponent />
                         </span>
                       </span>
                     </div>
@@ -86,7 +106,7 @@ export default function Bookings() {
                       <input type="text" className="form-control" />
                       <span className="input-group-append">
                         <span className="input-group-text bg-white">
-                          <i className="fa fa-calendar" />
+                          <FormComponent />
                         </span>
                       </span>
                     </div>

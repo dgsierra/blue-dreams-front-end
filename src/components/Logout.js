@@ -1,5 +1,9 @@
+import { useDispatch } from 'react-redux';
+import { logOut } from '../redux/reducer/user';
+
 const Logout = ({ setCurrUser }) => {
   const logout = async (setCurrUser) => {
+    const dispatch = useDispatch();
     try {
       const response = await fetch('https://blue-dreams-back-end.herokuapp.com/logout', {
         method: 'delete',
@@ -11,6 +15,7 @@ const Logout = ({ setCurrUser }) => {
       const data = await response.json();
       if (!response.ok) throw data.error;
       localStorage.removeItem('token');
+      dispatch(logOut());
       setCurrUser(null);
     } catch (error) {
       console.log('error', error);

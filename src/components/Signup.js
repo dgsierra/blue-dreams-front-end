@@ -1,7 +1,10 @@
 /* eslint-disable no-alert */
 import { useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { signUp } from '../redux/reducer/user';
 
 const Signup = ({ setCurrUser, setShow }) => {
+  const dispatch = useDispatch();
   const formRef = useRef();
   const signup = async (userInfo, setCurrUser) => {
     const url = 'https://blue-dreams-back-end.herokuapp.com/signup';
@@ -17,6 +20,9 @@ const Signup = ({ setCurrUser, setShow }) => {
       const data = await response.json();
       if (!response.ok) throw data.error;
       localStorage.setItem('token', response.headers.get('Authorization'));
+      data.token = response.headers.get('Authorization');
+      dispatch(signUp(data));
+      console.log('data', data);
       setCurrUser(data);
     } catch (error) {
       alert('error', error);

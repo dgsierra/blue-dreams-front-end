@@ -6,12 +6,16 @@ import About from './About';
 // import Login from './Login';
 import Policy from './Policy';
 import User from './User';
+import { useFetchShipsQuery } from '../redux/slices/ships-slice';
 
 // eslint-disable-next-line no-console
 const MyTest = () => console.log('Sign Out');
 
 export default function Navbar() {
   const [currUser, setCurrUser] = useState(null);
+  const { data: ships, isFetching } = useFetchShipsQuery();
+  console.log('ships', ships);
+  console.log('isFetching', isFetching);
   return (
     <>
       <nav>

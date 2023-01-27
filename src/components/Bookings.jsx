@@ -1,3 +1,6 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable max-len */
 import React from 'react';
 import './Booking.css';
 
@@ -12,7 +15,7 @@ export default function Bookings() {
         </ul>
         <ul className="ms-5 list-unstyled text-light">
           <li>1. All rental boats must be returned in the same condition as when they were rented.</li>
-          <li>2. Renters must have a valid boater's license and provide proof of insurance.</li>
+          <li>2. Renters must have a valid boater`&apos`s license and provide proof of insurance.</li>
           <li>3. Renters must be at least 18 years of age and provide a valid government-issued ID.</li>
           <li>4. Renters must review and sign a rental agreement prior to taking possession of the boat.</li>
           <li>5. Renters are responsible for any damages or losses incurred during the rental period.</li>
@@ -23,7 +26,7 @@ export default function Bookings() {
           <li>10. Renters are responsible for following all applicable laws and regulations while operating the rental boat.</li>
           <li className="mt-1">Procedure:</li>
           <li>1. Customers must make a reservation in advance to rent a boat.</li>
-          <li>2. Upon arrival, customers must present a valid government-issued ID and boater's license for verification.</li>
+          <li>2. Upon arrival, customers must present a valid government-issued ID and boater`&apos`s license for verification.</li>
           <li>3. Customers must review and sign the rental agreement.</li>
           <li>4. Customers will receive a brief orientation on the operation of the boat and safety procedures.</li>
           <li>5. Customers will be provided with all necessary safety equipment, including life jackets.</li>
@@ -34,16 +37,19 @@ export default function Bookings() {
           <li>10. Customers will be provided with a receipt for their rental.</li>
         </ul>
         <div className="text-center">
-          <a type="button" className="btn navbar-toggler bg-dark p-2 text-decoration-none link-light mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <button type="button" className="btn navbar-toggler bg-dark p-2 text-decoration-none link-light mb-4" onClick="openModal()">
             BOOK NOW
-          </a>
+          </button>
+          {/* <a type="button" className="btn navbar-toggler bg-dark p-2 text-decoration-none link-light mb-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            BOOK NOW
+          </a> */}
         </div>
         <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div className="modal-dialog">
             <div className="modal-content bg2">
               <div className="modal-header">
                 <h5 className="modal-title text-light" id="staticBackdropLabel">BOOKING</h5>
-                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
               </div>
               <form>
                 <fieldset className="p-5">
@@ -73,7 +79,7 @@ export default function Bookings() {
                       <input type="text" className="form-control" />
                       <span className="input-group-append">
                         <span className="input-group-text bg-white">
-                          <i className="fa fa-calendar"></i>
+                          <i className="fa fa-calendar" />
                         </span>
                       </span>
                     </div>
@@ -82,7 +88,7 @@ export default function Bookings() {
                       <input type="text" className="form-control" />
                       <span className="input-group-append">
                         <span className="input-group-text bg-white">
-                          <i className="fa fa-calendar"></i>
+                          <i className="fa fa-calendar" />
                         </span>
                       </span>
                     </div>

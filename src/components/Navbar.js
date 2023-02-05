@@ -13,7 +13,7 @@ import Admin from './Admin';
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-dark bg-primary fixed-top">
+      <nav className="navbar navbar-dark bg-primary fixed-top test navbar-blue">
         <div className="container-fluid">
           <div className="navbar-brand ms-5">Blue Dreams Yatch</div>
           <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">

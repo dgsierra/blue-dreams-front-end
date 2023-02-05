@@ -10,3 +10,12 @@
 a {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.test {
+  border: red solid 5px;
+}
+
+.navbar-blue {
+  display: block;
+  position: relative;
+}

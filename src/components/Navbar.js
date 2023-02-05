@@ -8,6 +8,7 @@ import Ships from './Ships';
 import Reservations from './Reservations';
 import About from './About';
 import ShipsPost from './ShipsPost';
+import Admin from './Admin';
 
 export default function Navbar() {
   return (
@@ -31,7 +32,7 @@ export default function Navbar() {
                 <li><Link to="/reservations" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">RESERVATIONS</Link></li>
                 <li><Link to="/booking" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">BOOKING</Link></li>
                 <li><Link to="/about" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">ABOUT</Link></li>
-                <li><Link to="/new/ship" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">New ships</Link></li>
+                <li><Link to="/admin" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">ADMIN</Link></li>
                 <li><Link to="/login" className="btn btn-dark mt-3 w-75 ms-5 text-decoration-none link-light">LOG-IN</Link></li>
               </ul>
             </div>
@@ -64,6 +65,7 @@ export default function Navbar() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<h1>404: Not Found</h1>} />
+        <Route path="/admin" element={<Admin />} />
         <Route path="/new/ship" element={<ShipsPost />} />
       </Routes>
     </>

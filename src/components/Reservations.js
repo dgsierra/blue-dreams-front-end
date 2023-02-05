@@ -30,11 +30,11 @@ export default function Reservations() {
   console.log('reservation', reservation);
   return (
     <div className="mt-5">
-      <br />
-      <br />
-      <br />
+
+
+
       <h1 className="text-center">RESERVATIONS</h1>
-      <br />
+
       <div className="container">
         { user !== 'success' ? <h1 className="text-center"> You need to signUp to make a reservation </h1> : reservations.map((res) => {
           const currentId = res.id;

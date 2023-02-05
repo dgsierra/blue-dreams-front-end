@@ -8,8 +8,8 @@ const Ships = () => {
   const { data: ships, isFetching } = useFetchShipsQuery();
   return (
     <div className="bg-image1">
-      <br />
-      <br />
+
+
       <h1 className="mt-5 text-center">SHIPS CATALOG</h1>
       <div id="carouselExampleInterval" className="carousel slide w-75 mt-5 mx-auto" data-bs-ride="carousel">
         <div className="carousel-inner ms-2">

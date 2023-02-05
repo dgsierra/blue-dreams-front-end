@@ -5,9 +5,9 @@ import './About.css';
 function About() {
   return (
     <div className="bg-1">
-      <br />
+
       <div className="mt-5 ms-5">
-        <br />
+
         <h1 className="text-center mt-1">ABOUT THE COMPANY</h1>
         <p className="text-dark w-50 mt-5 mx-auto">
           Welcome to Blue Dreams Yatch, the premier provider of luxury yatch rentals with 10 years of experience.

@@ -6,7 +6,7 @@ export default function Bookings() {
   return (
     <div className="bg1">
       <div className="mt-3 ms-5">
-        <br />
+
         <ul className="ms-4 list-unstyled text-light">
           <li className="mt-5 text-center">Policy and procedure for a ship rental company</li>
           <li className="mt-3">Policy:</li>

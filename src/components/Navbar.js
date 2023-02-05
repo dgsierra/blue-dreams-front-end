@@ -1,6 +1,6 @@
 import './Navbar.css';
 import { React } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import logo1 from '../assets/logo.png';
 import Bookings from './Bookings';
 import Login from './Login';
@@ -27,12 +27,12 @@ export default function Navbar() {
             </div>
             <div>
               <ul className="navbar-nav text-start pe-3">
-                        {/* <li><Link href="/">Home</Link></li> */}
-                <li><a href="/" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">SHIPS</a></li>
-                <li><a href="/reservations" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">RESERVATIONS</a></li>
-                <li><a href="/booking" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">BOOKING</a></li>
-                <li><a href="/about" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">ABOUT</a></li>
-                <li><a href="/login" className="btn btn-dark mt-3 w-75 ms-5 text-decoration-none link-light">LOG-IN</a></li>
+                <li><Link to="/" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">SHIPS</Link></li>
+                <li><Link to="/reservations" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">RESERVATIONS</Link></li>
+                <li><Link to="/booking" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">BOOKING</Link></li>
+                <li><Link to="/about" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">ABOUT</Link></li>
+                <li><Link to="/new/ship" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">New ships</Link></li>
+                <li><Link to="/login" className="btn btn-dark mt-3 w-75 ms-5 text-decoration-none link-light">LOG-IN</Link></li>
               </ul>
             </div>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />

@@ -7,12 +7,9 @@ import Login from './Login';
 import Ships from './Ships';
 import Reservations from './Reservations';
 import About from './About';
-import { useFetchShipsQuery } from '../redux/slices/ships-slice';
+import ShipsPost from './ShipsPost';
 
 export default function Navbar() {
-  const { data: ships, isFetching } = useFetchShipsQuery();
-  console.log('ships', ships);
-  console.log('isFetching', isFetching);
   return (
     <>
       <nav className="navbar navbar-dark bg-primary fixed-top">
@@ -30,11 +27,12 @@ export default function Navbar() {
             </div>
             <div>
               <ul className="navbar-nav text-start pe-3">
-                <a href="/" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">SHIPS</a>
-                <a href="/reservations" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">RESERVATIONS</a>
-                <a href="/booking" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">BOOKING</a>
-                <a href="/about" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">ABOUT</a>
-                <a href="/login" className="btn btn-dark mt-3 w-75 ms-5 text-decoration-none link-light">LOG-IN</a>
+                        {/* <li><Link href="/">Home</Link></li> */}
+                <li><a href="/" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">SHIPS</a></li>
+                <li><a href="/reservations" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">RESERVATIONS</a></li>
+                <li><a href="/booking" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">BOOKING</a></li>
+                <li><a href="/about" className="btn btn-hover mt-3 w-75 ms-5 text-decoration-none link-dark">ABOUT</a></li>
+                <li><a href="/login" className="btn btn-dark mt-3 w-75 ms-5 text-decoration-none link-light">LOG-IN</a></li>
               </ul>
             </div>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -66,6 +64,7 @@ export default function Navbar() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="*" element={<h1>404: Not Found</h1>} />
+        <Route path="/new/ship" element={<ShipsPost />} />
       </Routes>
     </>
   );

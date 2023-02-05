@@ -2,7 +2,7 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const baseUrl = 'https://blue-dreams-back-end.herokuapp.com/reservations/';
+const baseUrl = 'http://127.0.0.1:3000/reservations/';
 
 export const fetchReservations = createAsyncThunk('reservations/fetchReservations', async () => {
   const response = await fetch(`${baseUrl}index/`, {

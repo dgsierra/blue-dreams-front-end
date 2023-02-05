@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Ship.css';
 import img1 from '../assets/anchor1.png';
 import img2 from '../assets/anchor2.png';
-import { useFetchShipsQuery } from '../redux/slices/ships-slice';
+import { useFetchShipsQuery, usePostShipMutation } from '../redux/slices/ships-slice';
 
 const Ships = () => {
   const { data: ships, isFetching } = useFetchShipsQuery();
+  const [postShip] = usePostShipMutation();
+  useEffect(
+    postShip({
+      name: 'ship1', image: 'http://www.miimg.com', capacity: 10, price: 1000, availability: true, sale: false, price_sale: 0,
+    }),
+    [],
+  );
   return (
     <div className="bg-image1">
       <br />

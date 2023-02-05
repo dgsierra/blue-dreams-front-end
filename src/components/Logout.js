@@ -5,7 +5,7 @@ const Logout = ({ setCurrUser }) => {
   const logout = async (setCurrUser) => {
     const dispatch = useDispatch();
     try {
-      const response = await fetch('https://blue-dreams-back-end.herokuapp.com/logout', {
+      const response = await fetch('http://127.0.0.1:3000/logout', {
         method: 'delete',
         headers: {
           'content-type': 'application/json',

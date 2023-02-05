@@ -6,7 +6,7 @@ const Login = ({ setCurrUser, setShow }) => {
   const dispatch = useDispatch();
   const formRef = useRef();
   const login = async (userInfo, setCurrUser) => {
-    const url = 'https://blue-dreams-back-end.herokuapp.com/login';
+    const url = 'http://127.0.0.1:3000/login';
     try {
       const response = await fetch(url, {
         method: 'POST',

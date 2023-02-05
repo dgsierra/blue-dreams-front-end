@@ -23,7 +23,7 @@ Blue Dream Yatch Booking Frontend App is an application where the user can regis
 
 - [Blue Dreams Backend Website link](https://github.com/dgonzalesi/blue-dreams-back-end)
 
-- [Blue Dreams Backend deployment link](https://blue-dreams-back-end.herokuapp.com/ships/index/)
+- [Blue Dreams Backend deployment link](http://127.0.0.1:3000/ships/index/)
 
 ## Kanbanboard
 
@@ -32,7 +32,7 @@ Blue Dream Yatch Booking Frontend App is an application where the user can regis
 
 - The final number of colaborators is 5:
    - @renercrows
-   - @robinbenitezmora 
+   - @robinbenitezmora
    - @dgonzalesi
    - @diegoh40
    - @andym80

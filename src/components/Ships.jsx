@@ -3,17 +3,17 @@ import './Ship.css';
 import img1 from '../assets/anchor1.png';
 import img2 from '../assets/anchor2.png';
 import { useFetchShipsQuery } from '../redux/slices/ships-slice';
+import Loading from './Loading';
 
 const Ships = () => {
   const { data: ships, isFetching } = useFetchShipsQuery();
   return (
     <div className="bg-image1">
 
-
       <h1 className="mt-5 text-center">SHIPS CATALOG</h1>
       <div id="carouselExampleInterval" className="carousel slide w-75 mt-5 mx-auto" data-bs-ride="carousel">
         <div className="carousel-inner ms-2">
-          {isFetching ? <h1>Loading...</h1> : ships.map((ship, index) => (
+          {isFetching ? <Loading /> : ships.map((ship, index) => (
             <div key={ship.id} className={index === 0 ? 'carousel-item active' : 'carousel-item mt-5'} data-bs-interval="2000">
               <img src={ship.image} className="ships-img w-50 mx-auto d-block mt-5" alt="ships" />
               <h4 className="text-center text-secondary mt-5">
